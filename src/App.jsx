@@ -3,7 +3,7 @@ import "./App.css";
 import { Box } from "@mui/material";
 import ContentContainer from "./componenets/ContentContainer";
 import Content from "./componenets/Content";
-import Travel from "./componenets/travel/travel";
+import Travel from "./componenets/travel/Travel";
 import Educational from "./componenets/educational/educational";
 import Reserve from "./componenets/Reserve";
 

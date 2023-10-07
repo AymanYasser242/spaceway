@@ -187,32 +187,7 @@ const Reserve = () => {
                 </FormControl>
               </Grid>
 
-              <Grid
-                xs={12}
-                md={6}
-                item
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                  padding: "1rem 1.5rem",
-                  
-                }}
-              >
-                <FormControl fullWidth>
-                <FormLabel>Choose Examination Date</FormLabel>
-                  <TextField
-                    variant="standard"
-                    sx={{color:"#fff"}}
-                    size="medium"
-                    type="date"
-                    id="parentNumberInput"
-                    name="parentNumber"
-                    required
-                    value={formData.parentNumber}
-                    onChange={handleInputChange}
-                  />
-                </FormControl>
-              </Grid>
+
 
               <Grid
                 xs={12}
@@ -255,6 +230,73 @@ const Reserve = () => {
                   </Select>
                 </FormControl>
               </Grid>
+              <Grid
+                xs={12}
+                md={6}
+                item
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  padding: "1rem 2rem",
+                }}
+              >
+                <FormControl fullWidth>
+                  <InputLabel
+                    id="grade"
+                    sx={{
+                      transformOrigin: "top right",
+                      left: "auto",
+                      right: "2.3rem",
+                    }}
+                  >
+                    <i
+                      style={{ marginLeft: "0.5rem", color: "#0d6efd" }}
+                      className="fa-solid fa-graduation-cap"
+                    />
+                    Choose The Transport Company
+                  </InputLabel>
+                  <Select
+                    variant="standard"
+                    size="medium"
+                    labelId="grade-label"
+                    id="grade"
+                    name="grade"
+                    value={formData.grade}
+                    onChange={handleInputChange}
+                    required
+                  >
+                    <MenuItem value={1}>Nasa</MenuItem>
+                    <MenuItem value={2}>SpaceX</MenuItem>
+                    <MenuItem value={3}>Blue Origin</MenuItem>
+                    <MenuItem value={4}>virgion galagtic</MenuItem>
+                  </Select>
+                </FormControl>
+              </Grid>
+              <Grid
+              xs={12}
+              item
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                padding: "1rem 1.5rem",
+                
+              }}
+            >
+              <FormControl fullWidth>
+              <FormLabel>Choose Examination Date</FormLabel>
+                <TextField
+                  variant="standard"
+                  sx={{color:"#fff"}}
+                  size="medium"
+                  type="date"
+                  id="parentNumberInput"
+                  name="parentNumber"
+                  required
+                  value={formData.parentNumber}
+                  onChange={handleInputChange}
+                />
+              </FormControl>
+            </Grid>
               <Grid
                 xs={12}
                 item

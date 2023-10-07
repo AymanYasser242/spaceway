@@ -3,10 +3,10 @@ import Lottie from "lottie-react";
 import animation from "../assets/animation2.json";
 import arrows from "../assets/arrows.json";
 import educational from "../assets/educational.json";
-import Travel from "./travel/travel";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import Aos from "aos";
+import Travel from "./travel/Travel";
 const Content = () => {
   useEffect(() => {
     Aos.init({
@@ -26,18 +26,46 @@ const Content = () => {
       className="content"
     >
       <Box className="hero" data-aos="fade-down">
-        <Box className="animation">
-          <Lottie
-            loop
-            animationData={animation}
-            style={{ maxWidth: "30rem" }}
-          />
+        <Box
+          className="animation"
+          sx={{ px: { xs: "0%", sm: "15%", md: "20%", lg: "30%", xl: "35%" } , top:{xs : "5%", lg:"5%"} }}
+        >
+          <Lottie loop animationData={animation} style={{ maxWidth: "100%" }} />
         </Box>
-        <Box className="slogan">
-          <h1>
+        <Box
+          className="slogan"
+          sx={{ mt: { xs: "120%", md: "30%", lg: "25%" } }}
+        >
+          <Typography
+            variant="h1"
+            component={"h1"}
+            sx={{
+              fontSize: {
+                xs: "3.5rem",
+                sm: "5rem",
+                md: "8rem",
+                lg: "10rem",
+                xl: "12rem",
+              },
+            }}
+          >
             <span>S</span>pa<span>c</span>e <span>W</span>ay
-          </h1>
-          <p>Your GateWay To The Stars</p>
+          </Typography>
+          <Typography
+            variant="p"
+            component={"p"}
+            sx={{
+              fontSize: {
+                xs: "1rem",
+                sm: "1.1rem",
+                md: "1.2rem",
+                lg: "1.3rem",
+                xl: "1.4rem",
+              },
+            }}
+          >
+            Your GateWay To The Stars
+          </Typography>
         </Box>
         <Box className="arrows">
           <Lottie loop animationData={arrows} style={{ maxWidth: "20rem" }} />
@@ -45,9 +73,9 @@ const Content = () => {
       </Box>
       <Box className="features">
         <Grid container className="wrapper">
-          <h1>Travel</h1>
+          <Grid item xs={12}><h1>Travel</h1></Grid>
           <Grid container className="cards-holder">
-            <Grid item md={4} className="card" data-aos="slide-right">
+            <Grid item xs={12} md={4} className="card" data-aos="slide-right">
               <Typography
                 variant="h4"
                 component={"h4"}
@@ -66,7 +94,7 @@ const Content = () => {
                 <img src="/research-pana.png" style={{ maxWidth: "15rem" }} />
               </Box>
             </Grid>
-            <Grid item md={4} className="card" data-aos="fade-down">
+            <Grid item xs={12} md={4} className="card" data-aos="fade-down">
               <Typography
                 variant="h4"
                 component={"h4"}
@@ -85,7 +113,7 @@ const Content = () => {
                 <img src="/Astronaut-bro.png" style={{ maxWidth: "15rem" }} />
               </Box>
             </Grid>
-            <Grid item md={4} className="card" data-aos="slide-left">
+            <Grid item xs={12} md={4} className="card" data-aos="slide-left">
               <Typography
                 variant="h4"
                 component={"h4"}
@@ -125,7 +153,7 @@ const Content = () => {
           </Link>
         </Grid>
         <Grid item md={6} data-aos="zoom-in-left">
-          <Box className="animation-icon" >
+          <Box className="animation-icon">
             <Lottie animationData={educational} />
           </Box>
         </Grid>

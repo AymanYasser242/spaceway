@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
+import Footer from "./Footer";
 
 
 const ContentContainer = () => {
@@ -13,6 +14,7 @@ const ContentContainer = () => {
     >
     <Header />
       <Outlet />
+      <Footer />
     </Box>
   );
 };
